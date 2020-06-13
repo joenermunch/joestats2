@@ -1,0 +1,48 @@
+<div class="main-content">
+  <mat-card class="main-card" style="padding-bottom: 5px; margin-bottom: 20px">
+    <mat-card-header>
+      <mat-card-title style="font-size: 20px; margin-top: 40px; margin-bottom: 20px">
+        Top Tracks
+      </mat-card-title>
+      <mat-card-subtitle style="font-size: 16px; width: 80%">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum, officiis!
+      </mat-card-subtitle>
+    </mat-card-header>
+  </mat-card>
+  <mat-card class="main-card">
+    <mat-card-content style="padding: 0 !important">
+      <mat-nav-list style="padding: 0 !important;">
+        <mat-list-item (click)="openDialog(track)" class="list-item" style="height: 150px; padding: 0 !important;"
+          *ngFor="let track of topTracks; let lastItem = last; let firstItem = first">
+
+
+          <!-- <img [style.borderTopLeftRadius]="firstItem ? '4px' : 0" class="image" style="width: 150px;"
+            [src]="track.album.images[0].url" /> -->
+
+          <img [style.borderBottomLeftRadius]="lastItem ? '4px' : 0" [style.borderTopLeftRadius]="firstItem ? '4px' : 0"
+            class="image" [src]="track.album.images[0].url" />
+
+          <div class="text-container" style="margin-left: 16px; display: flex; flex-direction: column">
+            <p class="track-name">{{track.name}}</p>
+            <div class="artist-text-container"
+              *ngFor="let artist of track.artists; let lastItem = last; let firstItem = first">
+              <span style="margin-right: 3.5px !important;" class="artists">
+                {{formatArtistName(track, artist, track.artists, lastItem)}}
+              </span>
+            </div>
+          </div>
+          <div class="play-container" (click)="handleSpotifyNavigate(track)">
+            <span class="play-button material-icons">
+              play_arrow
+            </span>
+          </div>
+
+          <mat-divider *ngIf="!lastItem"></mat-divider>
+
+
+        </mat-list-item>
+
+      </mat-nav-list>
+    </mat-card-content>
+  </mat-card>
+</div>

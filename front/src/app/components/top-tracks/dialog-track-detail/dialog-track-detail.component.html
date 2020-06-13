@@ -1,0 +1,20 @@
+<div style="position: relative; padding-bottom: 20px;" class="image-container">
+
+  <img style="width: 100%; margin-bottom: 16px;" [src]="track.album.images[0].url">
+
+  <span style="font-size: 30px; line-height: 35px;">{{track.name}}</span>
+  <p style="margin-bottom: 5px; margin-top: 5px;">from the album <strong>{{track.album.name}}</strong></p>
+
+  <p [style.marginTop]="firstItem ?  '16px 0' : null" style="font-size: 24px; "
+    *ngFor="let artist of track.artists; let firstItem = first">{{artist.name}}</p>
+
+  <div class="play-container" (click)="handleSpotifyNavigate(track)"
+    style="position: absolute; cursor: pointer; right: 0; bottom: -10px; display: flex; align-items: center;">
+    <span class="play-button material-icons">
+      play_arrow
+    </span>
+    <span style="margin-left: 5px">Play on Spotify</span>
+
+  </div>
+
+</div>

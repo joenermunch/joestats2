@@ -1,0 +1,15 @@
+$mainpurple: #6C63FF;
+
+
+.play-container {
+  position: absolute;
+  right: 15px;
+  bottom: 10px;
+  opacity: 0.5;
+
+  &:hover {
+    color: $mainpurple;
+    opacity: 1;
+  }
+
+}

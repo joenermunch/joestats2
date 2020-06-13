@@ -1,0 +1,133 @@
+$mainpurple: #6C63FF;
+
+.main-content {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #6C63FF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+
+}
+
+
+
+.main-card {
+  margin: 20px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  height: fit-content;
+  padding-bottom: 0 !important;
+  padding-top: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  position: relative;
+  width: 570.89px;
+
+  @media only screen and (max-width: 800px) {
+    width: 90%;
+  }
+
+}
+
+.list-item {
+  position: relative;
+  height: 150px !important;
+  padding: 0 !important;
+  word-wrap: normal;
+  word-break: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: inherit;
+  white-space: normal;
+
+  &:hover {
+
+    .play-button {
+      color: $mainpurple;
+      opacity: 1;
+    }
+
+  }
+
+}
+
+.list-item-first {
+  position: relative;
+  height: 500px !important;
+  width: 100%;
+  display: flex;
+  flex-direction: column !important;
+
+  &:hover {
+    .play-button {
+      color: $mainpurple;
+      opacity: 1;
+    }
+
+  }
+
+  @media only screen and (max-width: 1300px) {
+    height: 310px !important;
+    position: relative;
+  }
+}
+
+
+
+::ng-deep.mat-list-item-content {
+  padding: 0 !important;
+}
+
+.stats-text {
+  position: absolute;
+  right: 20px;
+  bottom: 10px;
+  color: $mainpurple;
+  text-shadow: 2px 2px 1px white;
+  font-weight: 600;
+
+}
+
+.artist-image {
+  width: 100%;
+}
+
+.artist-name {
+
+  font-size: 3em;
+  text-align: right;
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 50px;
+  color: white;
+  text-shadow: 5px 3px 1px $mainpurple;
+
+  padding-right: 10px;
+  margin-right: 20px;
+  width: 90%;
+
+  position: absolute;
+  right: -10px;
+  bottom: 30px;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+
+  .single {
+    color: $mainpurple;
+    text-shadow: 5px 3px 1px white;
+  }
+
+}
+
+.image {
+  width: 150px;
+}
+
+.text-container {
+  margin-left: 20px;
+}

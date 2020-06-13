@@ -1,0 +1,44 @@
+.main-content {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #6C63FF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-card {
+  margin: 20px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  height: fit-content;
+  padding-bottom: 400px;
+  padding-top: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  position: relative;
+  width: 50%;
+}
+
+.nav-list {
+  padding-top: 0;
+}
+
+.svg-home {
+  position: absolute;
+  bottom: 20px;
+  width: 50%;
+  right: 20px;
+  margin: 20px;
+}
+
+.list-item {
+  font-size: 20px;
+  margin: 0 !important;
+  height: 75px !important;
+}
+
+::ng-deep.mat-list-item-content {
+  padding: 20px;
+}

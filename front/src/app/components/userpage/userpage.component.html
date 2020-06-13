@@ -1,0 +1,36 @@
+<div class="main-content">
+  <mat-card class="main-card" style="padding-bottom: 20px; margin-bottom: 0">
+    <mat-card-header>
+      <mat-card-title style="font-size: 20px; margin-top: 40px; margin-bottom: 20px">
+        <span>Welcome, {{spotifyID}}!</span>
+      </mat-card-title>
+      <mat-card-subtitle style="font-size: 16px; width: 80%">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+        Omnis sequi
+        expedita consectetur ex
+        ullam.</mat-card-subtitle>
+    </mat-card-header>
+  </mat-card>
+
+  <mat-card class="main-card">
+    <mat-card-content>
+
+
+      <mat-nav-list class="nav-list">
+        <mat-list-item class="list-item" (click)="handleNavigation('tracks')">
+          Spotify Top Tracks
+        </mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item class="list-item" (click)="handleNavigation('artists')">
+          Spotify Top Artists
+        </mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item class="list-item" (click)="handleNavigation('lastfm')">
+          Last.FM Stats and Charts
+        </mat-list-item>
+        <mat-divider></mat-divider>
+      </mat-nav-list>
+
+    </mat-card-content>
+    <img src="../../../assets/undraw_music_r1se.svg" class="svg-home" />
+  </mat-card>
+</div>

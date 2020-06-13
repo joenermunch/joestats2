@@ -1,0 +1,41 @@
+<div class="main-content">
+
+  <mat-card class="main-card" style="padding-bottom: 20px; margin-bottom: 0">
+    <mat-card-header>
+      <mat-card-title style="color: #6C63FF; font-size: 40px; margin-top: 40px; margin-bottom: 30px">
+        <span>Welcome to joestats!</span>
+      </mat-card-title>
+      <mat-card-subtitle style="font-size: 16px; width: 80%">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+        Omnis sequi
+        expedita consectetur ex
+        ullam.</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <button mat-raised-button style="margin-top: 16px; margin-left: 16px; background-color: #6C63FF; color: white"><a
+          href="/api/auth/spotify">Login with
+          Spotify</a></button>
+      <button (click)="lastFM = !lastFM" mat-raised-button style="margin-top: 16px; margin-left: 16px;">Last.FM
+        Stats</button>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card *ngIf="lastFM" class="main-card" style="padding-bottom: 20px; margin-bottom: 0">
+    <mat-card-header>
+      <mat-card-title style="font-size: 20px; margin-top: 40px; margin-bottom: 20px">
+        <span>Last.FM stats and collage generator</span>
+      </mat-card-title>
+      <mat-card-subtitle style="font-size: 16px; width: 80%">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+        Omnis sequi
+        expedita consectetur ex
+        ullam.</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <button mat-raised-button style="margin-left: 16px; background-color: #6C63FF; color: white">Login with
+        Spotify</button>
+    </mat-card-content>
+  </mat-card>
+
+
+
+
+</div>

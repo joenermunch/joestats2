@@ -1,0 +1,39 @@
+<div class="main-content">
+  <mat-card class="main-card" style="padding-bottom: 5px; margin-bottom: 20px">
+    <mat-card-header>
+      <mat-card-title style="font-size: 20px; margin-top: 40px; margin-bottom: 20px">
+        Top Tracks
+      </mat-card-title>
+      <mat-card-subtitle style="font-size: 16px; width: 80%">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum, officiis!
+      </mat-card-subtitle>
+    </mat-card-header>
+  </mat-card>
+  <mat-card class="main-card">
+    <mat-card-content style="padding: 0 !important">
+      <mat-nav-list style="padding: 0 !important;">
+        <div *ngFor="let artist of topArtists; let lastItem = last; let firstItem = first">
+
+          <mat-list-item *ngIf="firstItem" class="list-item list-item-first" style="padding: 0 !important;">
+            <img class="artist-image" [src]="artist.images[0]">
+            <p class="artist-name">Your top artist is <span class="single">{{artist.name}}</span> </p>
+            <p class="stats-text">see statistics</p>
+
+            <mat-divider *ngIf="!lastItem"></mat-divider>
+          </mat-list-item>
+
+          <mat-list-item *ngIf="!firstItem" class="list-item">
+            <img [style.borderBottomLeftRadius]="lastItem ? '4px' : 0" class="image" [src]="artist.images[0]" />
+            <div class="text-container">
+              <p class="track-name">{{artist.name}}</p>
+            </div>
+
+            <mat-divider *ngIf="!lastItem"></mat-divider>
+          </mat-list-item>
+
+        </div>
+
+      </mat-nav-list>
+    </mat-card-content>
+  </mat-card>
+</div>
